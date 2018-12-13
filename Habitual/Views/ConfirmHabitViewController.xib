@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmHabitViewController" customModule="Habitual" customModuleProvider="target">
+            <connections>
+                <outlet property="habitImageView" destination="nyN-Ia-NBs" id="R8E-VZ-QBy"/>
+                <outlet property="habitNameInputField" destination="4vj-XO-pdm" id="Vbe-Zc-A5d"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNZ-zn-sE9">
+                    <rect key="frame" x="15" y="607" width="345" height="40"/>
+                    <color key="backgroundColor" red="0.30196078430000001" green="0.58431372550000005" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="gfj-38-7DT"/>
+                    </constraints>
+                    <state key="normal" title="Create Habit!">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="createHabitButtonPressed:" destination="-1" eventType="touchUpInside" id="NWt-01-uYx"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="CkE-UM-nfs">
+                    <rect key="frame" x="0.0" y="70" width="375" height="342.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nyN-Ia-NBs">
+                            <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="mV5-78-enX"/>
+                                <constraint firstAttribute="height" constant="200" id="nJa-tf-R0J"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the New Habit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJP-yQ-oY7">
+                            <rect key="frame" x="98.5" y="246" width="178" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Habit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vj-XO-pdm">
+                            <rect key="frame" x="50" y="312.5" width="275" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="4vj-XO-pdm" firstAttribute="leading" secondItem="CkE-UM-nfs" secondAttribute="leading" constant="50" id="Oxw-Uz-lUd"/>
+                        <constraint firstAttribute="trailing" secondItem="4vj-XO-pdm" secondAttribute="trailing" constant="50" id="q4l-Yh-eaN"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CkE-UM-nfs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9uk-BQ-NpL"/>
+                <constraint firstItem="GNZ-zn-sE9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="I1w-eF-P9R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GNZ-zn-sE9" secondAttribute="trailing" constant="15" id="Wlq-UW-31S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GNZ-zn-sE9" secondAttribute="bottom" constant="20" id="Y7L-0n-Jyf"/>
+                <constraint firstItem="CkE-UM-nfs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nTo-bY-vkR"/>
+                <constraint firstItem="CkE-UM-nfs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="sWE-7G-G2P"/>
+                <constraint firstAttribute="trailing" secondItem="CkE-UM-nfs" secondAttribute="trailing" id="uqi-q5-Hxi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
